@@ -388,9 +388,10 @@ function updateScore(countPlayers = ""){
     });
     countPoints = localStorage.getItem("countPoints")
     countWins = localStorage.getItem("countWins")
+    console.log(player2.wins, countWins)  
     player1 = JSON.parse(localStorage.getItem("player1"))
     console.log(player1.wins, countWins)
-    if (player1.wins >= countWins){
+    if (player1.wins >= countWins || player1.wins == countWins - 1 && player1.score == 15){
         document.getElementById("navnP1").style.opacity = 0
         document.getElementById("winsP1").innerHTML = player1.id
         document.getElementById("winsP1").style.fontSize = "7vh"
@@ -419,7 +420,7 @@ function updateScore(countPlayers = ""){
         
        
     }
-    else if (player2.wins >= countWins){
+    else if (player2.wins >= countWins || player2.wins == countWins - 1 && player2.score == 15){
         document.getElementById("navnP2").style.opacity = 0
         document.getElementById("winsP2").innerHTML = player2.id
         document.getElementById("winsP2").style.fontSize = "7vh"
@@ -447,7 +448,7 @@ function updateScore(countPlayers = ""){
         sendData("player2", player2)
         updateScore()
     }
-    else if (player3.wins >= countWins){
+    else if (player3.wins >= countWins || player3.wins == countWins - 1 && player3.score == 15){
         document.getElementById("navnP3").style.opacity = 0
         document.getElementById("winsP3").innerHTML = player3.id
         document.getElementById("winsP3").style.fontSize = "7vh"
@@ -477,7 +478,7 @@ function updateScore(countPlayers = ""){
         
        
     }
-    else if (player4.wins >= countWins){
+    else if (player4.wins >= countWins || player4.wins == countWins - 1 && player4.score == 15){
         document.getElementById("navnP4").style.opacity = 0
         document.getElementById("winsP4").innerHTML = player4.id
         document.getElementById("winsP4").style.fontSize = "7vh"
@@ -506,12 +507,12 @@ function updateScore(countPlayers = ""){
         updateScore()
     }
     if(window.location.pathname == "/html/" || window.location.pathname == "/html/index.html"){
-        document.getElementById("playerN1").innerHTML = "Spiller 1: " + player1.id;
-        document.getElementById("playerN2").innerHTML = "Spiller 2: " + player2.id;
-        document.getElementById("playerN3").innerHTML = "Spiller 3: " + player3.id;
-        document.getElementById("playerN4").innerHTML = "Spiller 4: " + player4.id;
-        document.getElementById("playerN5").innerHTML = "Spiller 5: " + player5.id;
-        document.getElementById("playerN6").innerHTML = "Spiller 6: " + player6.id;
+        document.getElementById("playerN1").innerHTML = "Lag 1: " + player1.id;
+        document.getElementById("playerN2").innerHTML = "Lag 2: " + player2.id;
+        document.getElementById("playerN3").innerHTML = "Lag 3: " + player3.id;
+        document.getElementById("playerN4").innerHTML = "Lag 4: " + player4.id;
+        document.getElementById("playerN5").innerHTML = "Lag 5: " + player5.id;
+        document.getElementById("playerN6").innerHTML = "Lag 6: " + player6.id;
         document.getElementById('pointsShow').innerHTML = 'Poeng satt til: ' + countPoints
         document.getElementById('winsShow').innerHTML = 'Sett satt til: ' + countWins
     }
@@ -678,7 +679,7 @@ function switchSides(countPlayers){
 
 function tilSpill(){
     if (!player1 || !player2 || !player3 || !player4){
-        document.getElementById("alert").innerHTML = "Du må legge til minst 2 spillere før du kan starte spillet"
+        document.getElementById("alert").innerHTML = "Du må legge til minst 2 lag før du kan starte spillet"
         }
     
     else if((player3.id || player4.id) && !player5.id){ 

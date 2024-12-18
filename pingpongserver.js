@@ -4,7 +4,7 @@ const port = process.env.PORT || 80;
 const cors = require('cors')
 
 //Set these variables to your preferred passwords
-const pass_admin = "";
+const pass_admin = "admin";
 const pass_game_1 = "";
 const pass_game_2 = "";
 const pass_game_3 = "";

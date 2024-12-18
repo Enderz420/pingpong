@@ -10,33 +10,33 @@
     <div class="formDiv">
         <form name="newPlayer" action="" method="">
             <input type="number" name="playerID" id="input-field" placeholder="PlayerID">
-            <input type="text" name="playerNameInput" id="input-field" placeholder="Navn på spiller">
+            <input type="text" name="playerNameInput" id="input-field" placeholder="Navn på Lag">
         </form>
         <div class="buttonDivIndex">
             <input type="button" name="" value="Lag Spiller" onclick="createNewPlayer(document.getElementsByTagName('form')[0])" id="buttonIndex">
             <button onclick="tilSpill()" id="buttonIndex">Til spill</button>
 
             <div class="spillere">
-                <h1>Bord 1:</h1>
-                <h3 id="playerN1">Spiller 1:</h3>
+                <h1>Bane 1:</h1>
+                <h3 id="playerN1">Lag 1:</h3>
                 <button value="1" onclick="deletePlayer(this)">Slett</button>
                 <br>
-                <h3 id="playerN2">Spiller 2:</h3>
+                <h3 id="playerN2">Lag 2:</h3>
                 <button value="2" onclick="deletePlayer(this)">Slett</button>
-                <h1>Bord 2:</h1>
-                <h3 id="playerN3">Spiller 3:</h3>
+                <h1>Bane 2:</h1>
+                <h3 id="playerN3">Lag 3:</h3>
                 <button value="3" onclick="deletePlayer(this)">Slett</button>
                 <br>
-                <h3 id="playerN4">Spiller 4:</h3>
+                <h3 id="playerN4">Lag 4:</h3>
                 <button value="4" onclick="deletePlayer(this)">Slett</button>
                 <br>
                 <button id="buttonIndex" onclick="window.location.href = '../html/game4.html'">Admin Bord 2</button>
                 <br>
-                <h1>Bord 3:</h1>
-                <h3 id="playerN5">Spiller 5:</h3>
+                <h1>Bane 3:</h1>
+                <h3 id="playerN5">Lag 5:</h3>
                 <button value="5" onclick="deletePlayer(this)">Slett</button>
                 <br>
-                <h3 id="playerN6">Spiller 6:</h3>
+                <h3 id="playerN6">Lag 6:</h3>
                 <button value="6" onclick="deletePlayer(this)">Slett</button>
             </div>
         </div>
